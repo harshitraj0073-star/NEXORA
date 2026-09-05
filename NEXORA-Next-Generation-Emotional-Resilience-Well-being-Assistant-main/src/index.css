@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #38bdf8;
+  --color-primary-hover: #0284c7;
+  --color-secondary: #f8fafc;
+  --color-background: #06080e;
+  --color-surface: transparent;
+  
+  --color-status-low: #10b981;
+  --color-status-moderate: #f59e0b;
+  --color-status-high: #ef4444;
+  --color-status-urgent: #f43f5e;
+}
+
+@layer base {
+  body {
+    background-color: #06080e;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Celestial seamless styling: remove opaque box cards, heavy borders and shadows */
+  .bg-white, 
+  .dark .bg-white,
+  .bg-slate-50,
+  .dark .bg-slate-50 {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: none !important;
+  }
+
+  .bg-slate-100,
+  .dark .bg-slate-100 {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+  }
+
+  .bg-slate-200,
+  .dark .bg-slate-200 {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .border,
+  .border-slate-100,
+  .border-slate-200,
+  .dark .border-slate-100,
+  .dark .border-slate-200 {
+    border-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* Remove heavy box drop shadows so typography floats on the starfield */
+  .shadow-xs,
+  .shadow-sm,
+  .shadow,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    box-shadow: none !important;
+  }
+
+  /* High contrast text against dark celestial background */
+  .text-slate-800,
+  .dark .text-slate-800 {
+    color: #f8fafc !important;
+  }
+
+  .text-slate-700,
+  .dark .text-slate-700 {
+    color: #e2e8f0 !important;
+  }
+
+  .text-slate-600,
+  .dark .text-slate-600 {
+    color: #cbd5e1 !important;
+  }
+
+  .text-slate-500,
+  .dark .text-slate-500 {
+    color: #94a3b8 !important;
+  }
+
+  /* Interactive hover transitions */
+  .hover\:bg-slate-50:hover,
+  .hover\:bg-slate-100:hover,
+  .dark .hover\:bg-slate-50:hover,
+  .dark .hover\:bg-slate-100:hover {
+    background-color: rgba(255, 255, 255, 0.07) !important;
+  }
+}
